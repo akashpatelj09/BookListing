@@ -20,6 +20,7 @@ def get_col_from_header(DataList):
     levelCol = DataList.index("Level")
     currentlyWithCol = DataList.index("Currently with")
     dateGivenCol = DataList.index("Date given")
+    binding = DataList.index("Binding")
     colIndex = {
         "nameCol": nameCol,
         "authorCol": authorCol,
@@ -31,6 +32,7 @@ def get_col_from_header(DataList):
         "levelCol": levelCol,
         "currentlyWithCol": currentlyWithCol,
         "dateGivenCol": dateGivenCol,
+        "binding" : binding,
     }
     return colIndex
 
@@ -45,6 +47,7 @@ def create_json_item(DataList, colIndex):
     level = DataList[colIndex["levelCol"]]
     currentlyWith = DataList[colIndex["currentlyWithCol"]]
     dateGiven = DataList[colIndex["dateGivenCol"]]
+    binding = DataList[colIndex["binding"]]
         # "number": number,
     jsonItem = {
         "name": name,
@@ -56,7 +59,8 @@ def create_json_item(DataList, colIndex):
         "availability": availability,
         "level": level,
         "currentlyWith": currentlyWith,
-        "dateGiven": dateGiven
+        "dateGiven": dateGiven,
+        "binding": binding
     }
     return jsonItem
 
