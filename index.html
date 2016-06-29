@@ -34,11 +34,12 @@
         <th>Genre</th>
         <th>Level</th>
         <th>Pages</th>
-        <th>Given By</th>
+        <th>Owner</th>
         <th>Available</th>
         <th>Currently With</th>
         <th>Date Given</th>
         <th>Remarks</th>
+        <th>Binding</th>
       </tr>
       <tr ng-repeat="book in books | filter:query | orderBy:orderProp">
         <td>{{book.number}}</td>
@@ -52,6 +53,7 @@
         <td>{{book.currentlyWith}}</td>
         <td>{{book.dateGiven}}</td>
         <td>{{book.remarks}}</td>
+        <td>{{book.binding}}</td>
       </tr>
       </table>
 
